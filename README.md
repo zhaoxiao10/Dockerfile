@@ -16,6 +16,7 @@ boot2docker for Dockerfiles.
 ### boot2docker ssh
 
  - boot2docker ssh
+
   ```
 password: tcuser
 ```
@@ -23,6 +24,7 @@ password: tcuser
 ### chef-boot2docker
 
  - bin/chef-docker <dockerimage_path> -r <cookbook_path>
+
  ```
 ex. http://qiita.com/mokemokechicken/items/1a7c2058877391da2422
 ```
