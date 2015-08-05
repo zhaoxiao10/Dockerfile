@@ -23,7 +23,7 @@ RUN useradd -d /home/zhaoxiao10 -m -s /bin/zsh zhaoxiao10
 RUN echo zhaoxiao10:123456 | chpasswd
 RUN echo 'zhaoxiao10 ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN mkdir -p /home/zhaoxiao10/.ssh
-ADD id-rsa.pub /home/zhaoxiao10/.ssh/authorized_keys
+#ADD id-rsa.pub /home/zhaoxiao10/.ssh/authorized_keys
 RUN chown zhaoxiao10:zhaoxiao10 -R /home/zhaoxiao10
 RUN chmod 700 /home/zhaoxiao10/.ssh
 
