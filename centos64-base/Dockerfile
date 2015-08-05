@@ -1,4 +1,4 @@
-FROM centos:6.4
+FROM centos:6
 MAINTAINER zhaoxiao10
 
 ENV PATH $PATH:/usr/bin
