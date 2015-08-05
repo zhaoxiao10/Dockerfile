@@ -19,13 +19,13 @@ RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
 RUN ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa
 
 # add centos user (password=password)
-RUN useradd -d /home/kzdev -m -s /bin/zsh kzdev
-RUN echo kzdev:kzdev | chpasswd
-RUN echo 'kzdev ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-RUN mkdir -p /home/kzdev/.ssh
-ADD id-rsa.pub /home/kzdev/.ssh/authorized_keys
-RUN chown kzdev:kzdev -R /home/kzdev
-RUN chmod 700 /home/kzdev/.ssh
+RUN useradd -d /home/zhaoxiao10 -m -s /bin/zsh zhaoxiao10
+RUN echo zhaoxiao10:123456 | chpasswd
+RUN echo 'zhaoxiao10 ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN mkdir -p /home/zhaoxiao10/.ssh
+ADD id-rsa.pub /home/zhaoxiao10/.ssh/authorized_keys
+RUN chown zhaoxiao10:zhaoxiao10 -R /home/zhaoxiao10
+RUN chmod 700 /home/zhaoxiao10/.ssh
 
 EXPOSE 22
 CMD /usr/sbin/sshd -D
